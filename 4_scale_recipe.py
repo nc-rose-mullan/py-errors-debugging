@@ -1,5 +1,5 @@
 def scale_recipe(recipe, servings_from, servings_to):
-    factor = servings_to / servings_from
+    factor = servings_to // servings_from
     scaled = {}
     for ingredient, quantity in recipe.items():
         scaled[ingredient] = quantity * factor
