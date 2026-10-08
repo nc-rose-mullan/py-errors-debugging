@@ -9,11 +9,14 @@ def scaled_quantity_lbyl(recipe, scale, ingredient):
         return None
     return recipe[ingredient] * scale
 
+recipe = {"flour": 200, "sugar": 50}
+output = scaled_quantity_lbyl(recipe, 2, "sugar")
+
+print(output)
 
 
 
 
-    
 
 # def test_missing_ingredient_raises():
 #     recipe = {"flour": 200, "sugar": 50}

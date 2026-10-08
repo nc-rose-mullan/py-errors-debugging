@@ -8,6 +8,10 @@ def scaled_quantity_eafp(recipe, scale, ingredient):
     except TypeError:
         return None
 
+recipe = {"flour": 200, "sugar": 50}
+output = scaled_quantity_eafp(recipe, 2, "sugar")
+
+print(output)
 
 
 
