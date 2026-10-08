@@ -19,7 +19,8 @@ print(output)
 
 
 
-# def test_missing_ingredient_raises():
-#     recipe = {"flour": 200, "sugar": 50}
-#     with pytest.raises(IngredientMissingError):
-#         scaled_quantity_eafp(recipe, scale=2, ingredient="butter")
+def test_missing_ingredient_raises():
+    recipe = {"flour": 200, "sugar": 50}
+    with pytest.raises(IngredientMissingError) as exc_info:
+        scaled_quantity_eafp(recipe, 2, "butter")
+    assert str(exc_info.value) == "Missing ingredient: butter"
