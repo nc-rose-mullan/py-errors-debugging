@@ -1,12 +1,11 @@
-def scale_recipe(recipe, scale):
-    """Scale all quantities in a recipe by a factor."""
-    scaled = recipe
-    for ingredient in scaled:
-        scaled[ingredient] = scaled[ingredient] * scale
+def scale_recipe(recipe, servings_from, servings_to):
+    factor = servings_to / servings_from
+    scaled = {}
+    for ingredient, quantity in recipe.items():
+        scaled[ingredient] = quantity * factor
     return scaled
 
 
-original = {"flour": 200, "sugar": 50, "butter": 100}
-doubled = scale_recipe(original, 2)
-print(doubled)
-print(original)
+def test_scale_recipe_non_whole_factor():
+    recipe = {"flour": 200}
+    assert scale_recipe(recipe, 4, 6) == {"flour": 300}
