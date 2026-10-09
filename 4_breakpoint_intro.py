@@ -8,6 +8,13 @@ def scale_recipe(recipe, scale):
 
 print(scale_recipe({"flour": 200, "sugar": 50, "butter": 100}, 2))
 
+
+
+
+
+
+
+
 # n  - run the next line
 # s  - step into a function call
 # p  - print a value (p factor)
