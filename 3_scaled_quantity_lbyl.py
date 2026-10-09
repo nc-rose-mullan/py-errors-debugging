@@ -10,7 +10,7 @@ def scaled_quantity_lbyl(recipe, scale, ingredient):
     return recipe[ingredient] * scale
 
 recipe = {"flour": 200, "sugar": 50}
-output = scaled_quantity_lbyl(recipe, 2, "sugar")
+output = scaled_quantity_lbyl(recipe, -2, "flour")
 
 print(output)
 
